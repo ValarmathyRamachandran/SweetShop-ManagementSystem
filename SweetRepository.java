@@ -1,37 +1,24 @@
 package bridgelabz.sweetshop;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class SweetRepository extends Sweet {
-	private List sweetList = new ArrayList();
+public class SweetRepository {
+	//private List sweetList = new ArrayList();
+	private Set<Sweet> sweetList = new HashSet();
 	
-	public List getSweetList() {
+	public Set<Sweet> getSweetList() {
 		return sweetList;
 	}
- 
- public void add(GulabJamun objGulabJamun) {
-	 sweetList.add(objGulabJamun);
+	
+	public void add(Sweet sweet) {
+		 sweetList.add(sweet);
+	 }
 	 
- }
- public void add (Laddu objLaddu) {
- 	sweetList.add(objLaddu);
+	 public void delete(Sweet sweet) {
+		 sweetList.remove(sweet);
+	 }
 }
- 
- public void add (Modak objModak) {
-	 sweetList.add(objModak);
- }
- 
- public void add (Rasagulla objRasagulla) {
-	 sweetList.add(objRasagulla);
- }
- 
- public void add (Rasmalai objRasmalai) {
-	 sweetList.add(objRasmalai);
- }
- 
- 
- }
+
  
 
 

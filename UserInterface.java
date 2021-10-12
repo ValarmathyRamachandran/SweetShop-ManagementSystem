@@ -1,11 +1,11 @@
 package bridgelabz.sweetshop;
 
-import java.util.List;
+import java.util.Set;
 
-public class UserInterface extends Sweet {
-	public void print(List list) {
-		for(int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
-		}
+public class UserInterface {
+	public void print(Set<Sweet> set) {
+		for(Sweet sweet:set) {
+			System.out.println(sweet);
+		}	
 	}
 }

@@ -8,4 +8,17 @@ public class UserInterface {
 			System.out.println(sweet);
 		}	
 	}
+	public void printIdiet(Set<Sweet> set) {
+		for(Sweet sweet:set) {
+			if(sweet instanceof IDiet)
+			System.out.println(sweet);
+		}
+	}
+	public void printNormal(Set<Sweet> set) {
+		for(Sweet sweet:set) {
+			if(sweet instanceof INormal)
+			System.out.println(sweet);
+		}
+	}
 }
+

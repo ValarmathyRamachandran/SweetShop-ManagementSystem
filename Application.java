@@ -1,7 +1,7 @@
 package bridgelabz.sweetshop;
 import java.util.Set;
 
-public class Application{
+public class Application {
 	
 	public static void main(String args[]) {
 		
@@ -31,6 +31,10 @@ public class Application{
 		objRasamalai.id= "r1005";
 		objRasamalai.price = 300;
 		
+		DatesBarfi datesbarfi = new DatesBarfi();
+		datesbarfi.id = "D1006";
+		datesbarfi.price = 450;
+		
 		SweetRepository sweetRepository = new SweetRepository();
 		sweetRepository.add(objGulabJamun);
 		sweetRepository.add(objLaddu);
@@ -38,17 +42,21 @@ public class Application{
 		sweetRepository.add(objRasagulla);
 		sweetRepository.add(objRasamalai);
 		sweetRepository.add(objLaddu2);
+		sweetRepository.add(datesbarfi);
 		
 		
 		UserInterface ui = new UserInterface();
-		Set<Sweet> sweetList = sweetRepository.getSweetList();
-		ui.print(sweetList);
+		Set<Sweet> sweetSet = sweetRepository.getSweetList();
+		System.out.println("Printing Normal Sweets:");
+		ui.printNormal(sweetSet);
 		
 		sweetRepository.delete(objRasagulla);
 		sweetRepository.delete(objRasamalai);
 		
 		System.out.println("After Deleting the Remaining sweets are:");
-		ui.print(sweetList);
+		ui.print(sweetSet);
+		System.out.println("Printing Diet Sweets:");
+		ui.printIdiet(sweetSet);
 	
 	}
 }

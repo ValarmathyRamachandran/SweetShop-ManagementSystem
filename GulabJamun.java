@@ -1,6 +1,6 @@
 package bridgelabz.sweetshop;
 
-public class GulabJamun extends Sweet {
+public class GulabJamun extends Sweet implements INormal{
 	public GulabJamun() {
 		name = "GulabJamun";
 		category = Sweet.Category.MILK;

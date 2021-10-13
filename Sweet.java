@@ -2,7 +2,7 @@ package bridgelabz.sweetshop;
 
 import java.util.Objects;
 
-public class Sweet {
+public abstract class Sweet {
 	
 	enum Color{
 		BROWN, RED, GREEN, WHITE, BROWN_WHITE,YELLOW;
@@ -11,11 +11,13 @@ public class Sweet {
 		MILK, SUGARLESS,JAGGERY,GHEE;
 	}
 	
-	String id;
+	
 	Color color;
-	int price;
 	Category category;
 	String name;
+	public String id;
+	public int price;
+
 	@Override
 	public String toString() {
 		return "Sweet [id=" + id + ", color=" + color + ", price=" + price + ", category=" + category + ", name=" + name
